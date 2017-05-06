@@ -28,6 +28,7 @@ function getListings (){
           cellText += "<p>" + "Rents for only $" + response[i].rent+ "! </p></div>";
         }// end else
         outputDiv.append( cellText);
+
       }// end for
     }// end success
 

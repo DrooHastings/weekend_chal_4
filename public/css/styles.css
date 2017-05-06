@@ -1,0 +1,24 @@
+h1 {
+  text-align: center;
+}
+
+
+#outputDiv {
+  margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+body {
+
+  background: linear-gradient(to right, #30302e, #0d7691); /* Standard syntax */
+
+}
+
+.listDiv{
+  background-color: #cccab7;
+  margin: 3px;
+  padding: 5px;
+  height: 110px;
+
+}
