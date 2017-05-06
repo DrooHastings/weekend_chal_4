@@ -1,11 +1,95 @@
 # Weekend Challenge 4 - Mongo and Bootstrap
 
-Welcome to weekend challenge 4! This weekend, you will take on the role of an application developer for a real estate company. You will be working with Data that we will be providing to you. It will be a collection called “listings”. Inside of it, you will find information for properties that are either for Rent or for Sale. 
 
-You job, is to get this Data on the DOM, accounting for the inconsistent datatypes that are possible with MongoDB. But additionally, let’s bring in Bootstrap to the mix to make sure that the application looks as good as possible. 
 
 Here are the requirements of the project:
 * Create a Full Stack application from the ground up using jQuery, Node, and MongoDB,
+
+***Todos***
+Steps from Client/Server Review:
+===
+
+
+Set up Node + Express to use Body-Parser
+---
+[x] npm init
+[x] npm install express --save
+[x] npm install body-parser   [x] save
+
+Client side setup
+---
+[x] created public folder
+[x] create vendors folder in public
+[x] create views folder in public
+[x] create index.html and styles.css in views folder
+[x] place jquery js file in vendors
+[x] create cripts folder in public
+[x] create client.js in scripts
+[x] src jquery, then client.js
+[x] link bootstrap
+[x] link styles.css
+[x] add .gitignore file
+[x] gitignore .DS_Store and node_modules
+
+Server setup
+---
+[x] create'server.js'
+[x] require the following:
+ - express
+ - path
+ - body-parser
+[x] set app to be an express app: var app = express() ;
+- set up uses:
+ [x] bodyParser.urlencoded
+ [x] express.static for public folder
+[x] add spin up server code (app.listen)
+[x] test server up
+[x] add serve the html file code
+[x] restart server
+[x] open page in browser
+
+GET Route that gets data
+
+**Client side function getListings
+[x] called onReady
+[] for loop that appends to an .outputDiv
+[] p tags for response[i].whatever
+
+[]conditional for if (response[i].cost = null) append response[i].rent
+
+else append response[i].cost**
+
+***Server side
+[] connect to mongoose
+  mongoose.connect( 'mongodb://localhost:27017/realestate');
+[] mongoose schema
+[] mongoose model
+  var albums = mongoose.model( 'listings', listingsSchema);
+[] app.get with mongoose call:
+[] in app.get:
+  listings.find().then(function(data){
+  // console.log('this is data:', data);
+  res.send(data);
+[]  ***
+
+
+
+AJAX get
+---
+- add AJAX get call function in client.js
+ - makes a GET call to a route
+ - console logs out the response
+- run this function on doc ready
+- add get route to server.js
+ - logs out (in terminal) that states that the route has been hit
+ - responds with a simple object
+- restart server
+- reload page
+- check the function is running on page load
+- check the terminal that the get route's console log is showing correctly
+- check the browser console that the server response is logging correctly
+
+
 * Work with the data set that we provide for you,
 * Use Bootstrap to present the data,
 * Account for the different data (“rent” versus “cost) and ensure that this is noted on the display of the information, by listing “For Rent” or “For Sale” based on which of the two properties that it has.
@@ -22,3 +106,6 @@ http://stackoverflow.com/questions/14453864/use-more-than-one-schema-per-collect
 ## Pro Mode
 Host the application on Heroku and mLabs. You will need to transfer the data up to mLabs. In will need to research to accomplish this.
 
+Welcome to weekend challenge 4! This weekend, you will take on the role of an application developer for a real estate company. You will be working with Data that we will be providing to you. It will be a collection called “listings”. Inside of it, you will find information for properties that are either for Rent or for Sale.
+
+You job, is to get this Data on the DOM, accounting for the inconsistent datatypes that are possible with MongoDB. But additionally, let’s bring in Bootstrap to the mix to make sure that the application looks as good as possible.
