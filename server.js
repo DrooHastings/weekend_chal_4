@@ -39,12 +39,12 @@ app.get('/', function (req, res){
 
 app.get('/listings', function(req,res){
   listings.find().then(function(data){
-  //   res.send(data);
-      console.log(data);
-  //
+    res.send(data);
+      // console.log(data);
+  
     });//end callback
 
   console.log('in /listings');
-  res.sendStatus(200);
+
 
 });// end get route

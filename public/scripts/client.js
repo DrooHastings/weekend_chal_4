@@ -10,9 +10,15 @@ function getListings (){
     type: 'GET',
     url: '/listings',
     success: function(response){
-      console.log( response );
-      //empty outputDiv
+
+      var outputDiv = $('#outputDiv');
+      // outputDiv.empty();
+      // console.log(response);
+      // $('#outputDiv').append('<p>' + response + '</p>' );
       //for loop w appends
+      for (var i = 0; i < response.length; i++) {
+        console.log(response[i]);
+      }// end for
     }// end success
 
   });//end ajax

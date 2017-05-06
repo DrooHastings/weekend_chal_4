@@ -60,13 +60,13 @@ GET Route that gets data
 else append response[i].cost**
 
 ***Server side
-[] connect to mongoose
+[x] connect to mongoose
   mongoose.connect( 'mongodb://localhost:27017/realestate');
-[] mongoose schema
-[] mongoose model
+[x] mongoose schema
+[x] mongoose model
   var albums = mongoose.model( 'listings', listingsSchema);
-[] app.get with mongoose call:
-[] in app.get:
+[x] app.get with mongoose call:
+[x] in app.get:
   listings.find().then(function(data){
   // console.log('this is data:', data);
   res.send(data);
