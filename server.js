@@ -41,10 +41,16 @@ app.get('/listings', function(req,res){
   listings.find().then(function(data){
     res.send(data);
       // console.log(data);
-  
+
     });//end callback
 
   console.log('in /listings');
 
 
 });// end get route
+
+app.post('/rentListings', function(){
+  console.log('in rentListings route');
+  res.sendStatus(200);
+
+});

@@ -70,24 +70,29 @@ else append response[i].cost**
   listings.find().then(function(data){
   // console.log('this is data:', data);
   res.send(data);
-[]  ***
+
+[]  ****
 
 
+[] make two schemas
+var buys = mongoose.model('buys', buySchema, 'listings');
+var rents = mongoose.model('rents', rentalSchema, 'listings');
 
-AJAX get
----
-- add AJAX get call function in client.js
- - makes a GET call to a route
- - console logs out the response
-- run this function on doc ready
-- add get route to server.js
- - logs out (in terminal) that states that the route has been hit
- - responds with a simple object
-- restart server
-- reload page
-- check the function is running on page load
-- check the terminal that the get route's console log is showing correctly
-- check the browser console that the server response is logging correctly
+[] function with conditional for two ajax POST routes depending on .val of dropdown
+
+[] div for input
+
+[x] input for city
+[x] input for square footage
+[x] input for cost
+[x] input for city
+[x] create dropdown with option to list rent or purchase
+[x] create button to add property
+
+[x] jquery event listener for addListing function
+
+[]
+
 
 
 * Work with the data set that we provide for you,
