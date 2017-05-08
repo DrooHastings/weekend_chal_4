@@ -1,3 +1,12 @@
+.jumbotron {
+  background-image: url("home.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #cccab7;
+}
+
+
+
 h1 {
   text-align: center;
 }
@@ -19,7 +28,7 @@ body {
   background-color: #cccab7;
   margin: 3px;
   padding: 5px;
-  height: 110px;
+  height: 125px;
 
 }
 
@@ -30,7 +39,8 @@ body {
 }
 
 #rbSelect {
-  background-color: white;
+  text-align: center;
+  background-color: #cccab7;
 
 }
 
@@ -41,6 +51,6 @@ body {
     position:relative;
     top:50%;
     left:50%;
+    background-color: #cccab7;
 
-
-}
+  }
