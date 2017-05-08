@@ -22,3 +22,25 @@ body {
   height: 110px;
 
 }
+
+#inputDiv {
+  margin:  auto;
+  width: 450px;
+
+}
+
+#rbSelect {
+  background-color: white;
+
+}
+
+#addButton {
+  height:40px;
+    width:100px;
+    margin: 20px 50px;
+    position:relative;
+    top:50%;
+    left:50%;
+
+
+}
