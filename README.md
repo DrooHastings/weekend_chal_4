@@ -80,7 +80,7 @@ var rents = mongoose.model('rents', rentalSchema, 'listings');
 
 [] function with conditional for two ajax POST routes depending on .val of dropdown
 
-[] div for input
+[x] div for input
 
 [x] input for city
 [x] input for square footage

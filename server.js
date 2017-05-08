@@ -15,8 +15,21 @@ var listingsSchema = mongoose.Schema({
   sqft: Number,
   city: String
 });
+
+var rentSchema = mongoose.Schema ({
+  rent: Number,
+  sqft: Number,
+  city: String
+});// may need to change this
+var sellSchema = mongoose.Schema ({
+  cost: Number,
+  sqft: Number,
+  city: String
+});
 //global listings model
 var listings = mongoose.model( 'listings', listingsSchema);
+var rents = mongoose.model ('Rent', rentSchema,'listings' );
+var sells = mongoose.model ('Sell', sellSchema, 'listings' );
 //uses
 
 app.use(express.static('public'));
@@ -49,8 +62,18 @@ app.get('/listings', function(req,res){
 
 });// end get route
 
-app.post('/rentListings', function(){
+app.post('/rentListings', function(req, res){
   console.log('in rentListings route');
+  var newRents = rents( req.body );
+  newRents.save();
+  res.sendStatus(200);
+
+});
+
+app.post('/sellListings', function(req, res){
+  console.log('in sellListings route');
+  var newSells = sells( req.body );
+  newSells.save();
   res.sendStatus(200);
 
 });
